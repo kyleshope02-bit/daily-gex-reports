@@ -32,36 +32,51 @@
 
   <h1>S&amp;P 500 Unusual GEX Scan</h1>
   <div class="subtitle">
-    0&ndash;10 day window &nbsp;|&nbsp; Scanned 503 tickers, showing top 2
-    by unusualness (0 strictly cleared threshold) &nbsp;|&nbsp; Generated: 2026-07-15 02:50
+    0&ndash;10 day window &nbsp;|&nbsp; Scanned 503 tickers &nbsp;|&nbsp;
+    Generated: 2026-07-15 04:04
   </div>
   <div class="legend" style="margin-bottom:16px;">
-    Ranked by size relative to each stock's own market cap and trading volume &mdash; not a flat
-    dollar cutoff. Absolute floor: |GEX| &ge; $25.0M. Strict threshold (&#9733;):
-    &ge; 0.050% of market cap OR &ge; 1.00x average
-    daily dollar volume. Rows below threshold are still shown as the most notable of the day.
+    Absolute floor applied to both lists: |GEX| &ge; $25.0M. Two independent views below:
+    the biggest dollar prints regardless of company size, and the biggest prints relative to each
+    company's own market cap.
   </div>
+
+  <h2 style="font-size:16px; margin: 24px 0 8px 0;">Top 10 &mdash; Largest Absolute GEX Position</h2>
   <table>
-    <thead><tr><th>Ticker</th><th>Spot</th><th>Golden Position (Largest |GEX|)</th>
-      <th>% of Market Cap</th><th>x Avg Daily $ Volume</th><th>Status</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>Spot</th><th>Golden Position (Largest |GEX|)</th><th>Absolute |GEX|</th></tr></thead>
     <tbody><tr>
-          <td><a class="ticker-link" href="detail_JPM.html">JPM</a></td>
-          <td>$342.89</td>
-          <td><span class="golden">$58.1M</span> @ $340 (2026-07-17)<br>
-              <span class="below muted">0.8% below spot</span></td>
-          <td>0.006%</td>
-          <td>0.02x</td>
-          <td><span class="muted">below threshold</span></td>
-        </tr><tr>
-          <td><a class="ticker-link" href="detail_BRK-B.html">BRK-B</a></td>
-          <td>$491.09</td>
-          <td><span class="golden">$42.2M</span> @ $500 (2026-07-17)<br>
-              <span class="above muted">1.8% above spot</span></td>
-          <td>0.004%</td>
-          <td>0.02x</td>
-          <td><span class="muted">below threshold</span></td>
-        </tr></tbody>
+              <td><a class="ticker-link" href="detail_JPM.html">JPM</a></td>
+              <td>$342.89</td>
+              <td><span class="golden">$58.1M</span> @ $340 (2026-07-17)<br>
+                  <span class="below muted">0.8% below spot</span></td>
+              <td>$58.1M</td>
+            </tr><tr>
+              <td><a class="ticker-link" href="detail_BRK-B.html">BRK-B</a></td>
+              <td>$491.09</td>
+              <td><span class="golden">$42.2M</span> @ $500 (2026-07-17)<br>
+                  <span class="above muted">1.8% above spot</span></td>
+              <td>$42.2M</td>
+            </tr></tbody>
   </table>
+
+  <h2 style="font-size:16px; margin: 28px 0 8px 0;">Top 10 &mdash; Largest GEX as % of Market Cap</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Spot</th><th>Golden Position (Largest |GEX|)</th><th>% of Market Cap</th></tr></thead>
+    <tbody><tr>
+              <td><a class="ticker-link" href="detail_JPM.html">JPM</a></td>
+              <td>$342.89</td>
+              <td><span class="golden">$58.1M</span> @ $340 (2026-07-17)<br>
+                  <span class="below muted">0.8% below spot</span></td>
+              <td>0.006%</td>
+            </tr><tr>
+              <td><a class="ticker-link" href="detail_BRK-B.html">BRK-B</a></td>
+              <td>$491.09</td>
+              <td><span class="golden">$42.2M</span> @ $500 (2026-07-17)<br>
+                  <span class="above muted">1.8% above spot</span></td>
+              <td>0.004%</td>
+            </tr></tbody>
+  </table>
+
   <div class="footer">
     Model output based on Yahoo Finance open interest &amp; implied vol, Black-Scholes gamma.
     Not the same as broker/dealer proprietary GEX feeds -- treat as a positioning heuristic.
